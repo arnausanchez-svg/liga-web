@@ -1,0 +1,293 @@
+/* =========================================================
+   La Liga · hoja de estilos
+   Secciones: 1. Colores y fondo · 2. Tipografía · 3. Estructura
+              4. Equipos · 5. Tabla de partidos · 6. Botón y accesibilidad
+   ========================================================= */
+
+
+/* ---------- 1. COLORES Y FONDO ---------- */
+:root {
+  --cesped: #0f4d35;
+  --cesped-oscuro: #0a3526;
+  --tiza: #f3f5ee;
+  --tarjeta-amarilla: #f2c230;
+  --tarjeta-roja: #c8362b;
+  --tinta: #17221c;
+  --linea: #cdd5c8;
+}
+
+body {
+  margin: 0;
+  background: var(--tiza);
+  color: var(--tinta);
+}
+
+/* Cabecera con franjas de césped segado */
+.cabecera {
+  background-color: var(--cesped);
+  background-image: repeating-linear-gradient(
+    90deg,
+    var(--cesped) 0,
+    var(--cesped) 60px,
+    var(--cesped-oscuro) 60px,
+    var(--cesped-oscuro) 120px
+  );
+  color: var(--tiza);
+}
+
+.pie {
+  background: var(--cesped-oscuro);
+  color: var(--tiza);
+}
+
+
+/* ---------- 2. TIPOGRAFÍA ---------- */
+body {
+  font-family: "Barlow", "Segoe UI", Arial, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+
+h1,
+h2 {
+  font-family: "Barlow Condensed", "Arial Narrow", Arial, sans-serif;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: clamp(4rem, 14vw, 9rem);
+  letter-spacing: 0.01em;
+  margin: 0;
+}
+
+h2 {
+  font-size: 2rem;
+  margin: 0 0 0.5rem;
+}
+
+.lema {
+  font-size: 1.25rem;
+  max-width: 36ch;
+  margin: 0.5rem 0 0;
+}
+
+a {
+  color: var(--cesped);
+  font-weight: 500;
+}
+
+
+/* ---------- 3. ESTRUCTURA ---------- */
+.menu {
+  display: flex;
+  gap: 0.25rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--cesped-oscuro);
+}
+
+.menu a {
+  color: var(--tiza);
+  text-decoration: none;
+  padding: 0.4rem 0.9rem;
+  border-bottom: 3px solid transparent;
+  font-family: "Barlow Condensed", "Arial Narrow", Arial, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.menu a:hover {
+  border-bottom-color: var(--tarjeta-amarilla);
+}
+
+.menu a.activo {
+  border-bottom-color: var(--tarjeta-amarilla);
+}
+
+.portada {
+  padding: 3rem 1.5rem 3.5rem;
+  max-width: 62rem;
+  margin: 0 auto;
+}
+
+.portada-interior {
+  padding-bottom: 2rem;
+}
+
+.portada-interior h1 {
+  font-size: clamp(3rem, 10vw, 5.5rem);
+}
+
+.contenido {
+  max-width: 62rem;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem;
+}
+
+.contenido section + section {
+  margin-top: 2.5rem;
+}
+
+.contenido p {
+  max-width: 62ch;
+}
+
+.pie {
+  padding: 1.25rem 1.5rem;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.pie p {
+  margin: 0;
+}
+
+
+/* ---------- 4. EQUIPOS ---------- */
+.rejilla-equipos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.equipo {
+  background: #fff;
+  border: 1px solid var(--linea);
+  padding: 0 1.25rem 1.25rem;
+}
+
+.equipo h2 {
+  margin-top: 1rem;
+}
+
+.equipo dl {
+  margin: 0;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.25rem 1rem;
+}
+
+.equipo dt {
+  font-weight: 500;
+  color: #4d5c52;
+}
+
+.equipo dd {
+  margin: 0;
+}
+
+/* Banda con los colores de la camiseta */
+.camiseta {
+  height: 18px;
+  margin: 0 -1.25rem;
+}
+
+.madrid {
+  background: #fff;
+  border-bottom: 1px solid var(--linea);
+}
+
+.barca {
+  background: repeating-linear-gradient(90deg, #a50044 0, #a50044 18px, #004d98 18px, #004d98 36px);
+}
+
+.atletico {
+  background: repeating-linear-gradient(90deg, #cb3524 0, #cb3524 18px, #ffffff 18px, #ffffff 36px);
+  border-bottom: 1px solid var(--linea);
+}
+
+.athletic {
+  background: repeating-linear-gradient(90deg, #ee2523 0, #ee2523 18px, #ffffff 18px, #ffffff 36px);
+  border-bottom: 1px solid var(--linea);
+}
+
+
+/* ---------- 5. TABLA DE PARTIDOS ---------- */
+.aviso {
+  border-left: 6px solid var(--tarjeta-amarilla);
+  background: #fff;
+  padding: 0.6rem 1rem;
+}
+
+.tabla-contenedor {
+  overflow-x: auto;
+  margin-top: 1.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+caption {
+  text-align: left;
+  font-family: "Barlow Condensed", "Arial Narrow", Arial, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding-bottom: 0.5rem;
+}
+
+th,
+td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--linea);
+}
+
+thead th {
+  background: var(--cesped);
+  color: var(--tiza);
+  font-weight: 500;
+}
+
+.marcador {
+  font-family: "Barlow Condensed", "Arial Narrow", Arial, sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+tbody tr:hover {
+  background: #eef2ea;
+}
+
+
+/* ---------- 6. BOTÓN Y ACCESIBILIDAD ---------- */
+button {
+  font: inherit;
+  font-weight: 500;
+  background: var(--tarjeta-amarilla);
+  color: var(--tinta);
+  border: 2px solid var(--tinta);
+  padding: 0.6rem 1.25rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--tinta);
+  color: var(--tarjeta-amarilla);
+}
+
+.mensaje {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  background: #fff;
+  border-left: 6px solid var(--tarjeta-roja);
+  font-weight: 500;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--tarjeta-roja);
+  outline-offset: 2px;
+}
+
+@media (max-width: 480px) {
+  .menu {
+    padding: 0.5rem 0.75rem;
+  }
+  .menu a {
+    padding: 0.4rem 0.6rem;
+  }
+}

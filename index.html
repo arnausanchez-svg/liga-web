@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>La Liga | Inicio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="cabecera">
+    <nav class="menu" aria-label="Navegación principal">
+      <a href="index.html" class="activo" aria-current="page">Inicio</a>
+      <a href="equipos.html">Equipos</a>
+      <a href="partidos.html">Partidos</a>
+    </nav>
+
+    <div class="portada">
+      <h1>La Liga</h1>
+      <p class="lema">Fútbol de primera división en España: equipos, partidos y resultados.</p>
+    </div>
+  </header>
+
+  <main class="contenido">
+    <section>
+      <h2>Sobre esta web</h2>
+      <p>
+        Este es un proyecto de prácticas de Git y GitHub. La web es sencilla a propósito:
+        lo importante es el trabajo en equipo y el control de versiones.
+      </p>
+      <p>
+        Consulta las <a href="equipos.html">fichas de cuatro equipos</a> o la
+        <a href="partidos.html">tabla de resultados</a>.
+      </p>
+    </section>
+
+    <section>
+      <h2>Saluda al público</h2>
+      <button id="btn-mensaje" type="button">Mostrar mensaje</button>
+      <p id="mensaje" class="mensaje" role="status" hidden></p>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <p>Proyecto de Git y GitHub · ASIX 1.º · Escola Balmes</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
