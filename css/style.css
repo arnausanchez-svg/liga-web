@@ -310,3 +310,28 @@ button:focus-visible {
     padding: 0.4rem 0.6rem;
   }
 }
+
+/* ---------- 7. DISEÑO RESPONSIVE ---------- */
+
+@media (max-width: 600px) {
+  .portada {
+    padding: 2rem 1rem;
+  }
+
+  .contenido {
+    padding: 1.5rem 1rem 2rem;
+  }
+
+  .rejilla-equipos {
+    grid-template-columns: 1fr;
+  }
+
+  .tabla-contenedor {
+    overflow-x: auto;
+  }
+
+  th,
+  td {
+    padding: 0.5rem;
+  }
+}
