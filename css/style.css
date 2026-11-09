@@ -154,6 +154,13 @@ a {
   background: #fff;
   border: 1px solid var(--linea);
   padding: 0 1.25rem 1.25rem;
+  border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.equipo:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
 }
 
 .equipo h2 {
