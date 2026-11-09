@@ -2,7 +2,7 @@
 
 ## Integrantes
 - Arnau Sánchez
-- [Nombre del segundo integrante]
+- Bryan Briones
 
 ## Tema del proyecto
 La Liga española de fútbol.
